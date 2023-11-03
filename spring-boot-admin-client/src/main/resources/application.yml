@@ -1,0 +1,21 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:9091
+        enabled: true
+        auto-registration: true
+        instance:
+          name: ${spring.application.name:JSS}
+  application:
+    name: Spring Boot Admin Client
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+server:
+  port: 0
